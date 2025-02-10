@@ -1,0 +1,13 @@
+flask
+fastapi 
+uvicorn
+scikit-learn
+pandas 
+numpy 
+tensorflow 
+xgboost 
+lightgbm 
+kafka-python 
+pymongo 
+psycopg2-binary
+joblib

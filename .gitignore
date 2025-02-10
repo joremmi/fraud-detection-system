@@ -1,0 +1,4 @@
+/backend/fraud-detection-env/
+/backend/models/*.csv
+backend/models/fraud_detection_model.pkl
+/*.csv
