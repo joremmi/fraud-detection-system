@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: Fraud Detection API
+  version: 1.0.0
+paths:
+  /api/transactions/validate:
+    post:
+      summary: Validate transaction for fraud
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+      responses:
+        '200':
+          description: Validation result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationResult'

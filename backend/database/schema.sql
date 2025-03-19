@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS fraud_schema.transactions (
 
 CREATE TABLE IF NOT EXISTS fraud_schema.fraud_logs (
     id SERIAL PRIMARY KEY,
-    transaction_id INT REFERENCES fraud_schema.transactions(id),  -- Add fraud_schema. here
+    transaction_id INT REFERENCES fraud_schema.transactions(id),
     reason TEXT,
     detected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

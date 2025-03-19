@@ -1,0 +1,68 @@
+{
+  "dependencies": {
+    "@auth0/auth0-react": "^2.3.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mantine/core": "^7.16.3",
+    "@mantine/hooks": "^7.16.3",
+    "@mui/material": "^6.4.7",
+    "@nivo/bar": "^0.88.0",
+    "@nivo/core": "^0.88.0",
+    "@nivo/heatmap": "^0.88.0",
+    "@nivo/line": "^0.88.0",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tanstack/react-query": "^5.66.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/recharts": "^1.8.29",
+    "axios": "^1.7.9",
+    "chart.js": "^4.4.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "crypto-js": "^4.2.0",
+    "date-fns": "^4.1.0",
+    "jspdf": "^2.5.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-datepicker": "^4.10.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-qr-code": "^2.0.15",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.15.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/crypto-js": "^4.2.2",
+    "@types/cypress": "^1.1.6",
+    "@types/node": "^22.13.10",
+    "autoprefixer": "^10.4.17",
+    "cypress": "^14.1.0",
+    "cypress-xpath": "^2.0.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "test:e2e": "cypress run",
+    "cypress:open": "cypress open",
+    "docker:test": "docker-compose -f docker-compose.yml -f docker-compose.test.yml up --exit-code-from test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:3001"
+}

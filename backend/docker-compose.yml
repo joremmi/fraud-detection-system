@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - ML_SERVICE_URL=http://ml_service:5000/predict
+      - DB_HOST=postgres
+      - REDIS_HOST=redis
+    depends_on:
+      - ml_service
+      - postgres
+      - redis
+
+  ml_service:
+    build: 
+      context: .
+      dockerfile: ml_service/Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./models:/app/models
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=2323
+      - POSTGRES_DB=fraud_detection
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata: 
